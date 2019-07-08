@@ -39,6 +39,21 @@ collections:
       - {label: Image, name: image, widget: image}
       - {label: Body, name: body, widget: markdown}
 
+#markdown alex example
+  - name: alex
+    label: Alex
+    folder: source/alex/
+    extension: .html.md
+    format: frontmatter
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true}
+      - {label: Publish Date, name: date, widget: datetime}
+      - {label: Description, name: description, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Body, name: body, widget: markdown}
+
   - name: pages
     label: Pages
     files:
@@ -76,7 +91,7 @@ collections:
           - label: Currency
             name: currency
             widget: select
-            options: ['€', '$', '£']
+            options: ['€', '$', '£', '&']
             default: '€'
 
           - label: Weight
